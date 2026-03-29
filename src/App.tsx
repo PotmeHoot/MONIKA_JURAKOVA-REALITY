@@ -7,13 +7,10 @@ import { lazy, Suspense } from "react";
 import { ScrollProgress } from "./components/ScrollProgress";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { Showreel } from "./components/Showreel";
-import { Portfolio } from "./components/Portfolio";
 // Lazy load non-critical sections that are further down the page
 const About = lazy(() => import("./components/About").then(m => ({ default: m.About })));
 const Services = lazy(() => import("./components/Services").then(m => ({ default: m.Services })));
-const ARShowcase = lazy(() => import("./components/ARShowcase").then(m => ({ default: m.ARShowcase })));
-const Expertise = lazy(() => import("./components/Expertise").then(m => ({ default: m.Expertise })));
+const Benefits = lazy(() => import("./components/Benefits").then(m => ({ default: m.Benefits })));
 const Collaboration = lazy(() => import("./components/Collaboration").then(m => ({ default: m.Collaboration })));
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
@@ -36,6 +33,7 @@ function AppContent() {
   useEffect(() => {
     const prefetchLowerSections = () => {
       // Background prefetch for bottom sections to ensure they are ready before scroll
+      import("./components/Benefits");
       import("./components/Collaboration");
       import("./components/Contact");
       import("./components/Footer");
@@ -85,8 +83,6 @@ function AppContent() {
       <Navbar />
       <main>
         <Hero />
-        <Showreel />
-        <Portfolio />
         <LazySection id="about">
           <Suspense fallback={<SectionLoader />}>
             <About />
@@ -97,19 +93,14 @@ function AppContent() {
             <Services />
           </Suspense>
         </LazySection>
-        <LazySection id="ar">
-          <Suspense fallback={<SectionLoader />}>
-            <ARShowcase />
-          </Suspense>
-        </LazySection>
-        <LazySection id="experience">
-          <Suspense fallback={<SectionLoader />}>
-            <Expertise />
-          </Suspense>
-        </LazySection>
         <LazySection id="collaboration" eager={true}>
           <Suspense fallback={<SectionLoader />}>
             <Collaboration />
+          </Suspense>
+        </LazySection>
+        <LazySection id="benefits">
+          <Suspense fallback={<SectionLoader />}>
+            <Benefits />
           </Suspense>
         </LazySection>
         <LazySection id="contact" eager={true}>

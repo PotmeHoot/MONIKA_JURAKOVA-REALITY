@@ -8,6 +8,18 @@ import {
   Briefcase, 
   MessageSquare, 
   Layout, 
+  ShieldCheck,
+  User,
+  Scale,
+  Award,
+  Home,
+  Key,
+  Calculator,
+  Paintbrush,
+  FileText,
+  TrendingUp,
+  Camera,
+  Clock,
   LucideIcon
 } from "lucide-react";
 
@@ -20,7 +32,19 @@ export const Icons: Record<string, LucideIcon> = {
   Palette,
   Briefcase,
   MessageSquare,
-  Layout
+  Layout,
+  ShieldCheck,
+  User,
+  Scale,
+  Award,
+  Home,
+  Key,
+  Calculator,
+  Paintbrush,
+  FileText,
+  TrendingUp,
+  Camera,
+  Clock
 };
 
 export type IconName = keyof typeof Icons;
@@ -58,66 +82,12 @@ export interface HeroContent {
     label: string;
     href: string;
   };
-  stats: {
+  trustBadges: {
     label: string;
-    value: string;
+    icon: IconName;
   }[];
   availabilityLabel: string;
   scrollLabel: string;
-}
-
-export interface ShowreelContent {
-  eyebrow: string;
-  title: string;
-  description: string;
-  highlights: string[];
-  poster: string;
-  videoUrl: string;
-  videoLabel: string;
-  highlightsLabel: string;
-  cta: {
-    label: string;
-    href: string;
-  };
-  featured: boolean;
-}
-
-export type ProjectStatus = 'ready' | 'coming_soon' | 'hidden';
-
-export interface ProjectAsset {
-  type: 'image' | 'video';
-  file: string;
-  webpFile?: string;
-  srcSet?: string;
-}
-
-export interface Project {
-  id: string;
-  title: string;
-  category: string;
-  folder: string;
-  poster: string;
-  webpPoster?: string;
-  assets: ProjectAsset[];
-  client?: string;
-  agency?: string;
-  year?: string;
-  shortDescription?: string;
-  status?: ProjectStatus;
-  featured?: boolean;
-  order?: number;
-}
-
-export interface ARItem {
-  id: string;
-  title: string;
-  platform: 'TikTok' | 'Snapchat';
-  previewImage?: string;
-  qrCode?: string;
-  link: string;
-  status: ProjectStatus;
-  featured: boolean;
-  order: number;
 }
 
 export interface ServiceItem {
@@ -154,26 +124,21 @@ export interface ContactContent {
 }
 
 export interface AboutContent {
-  eyebrow: string;
   title: string;
   description: string;
-  brandsLabel: string;
-  expertiseLabel: string;
-  experienceEyebrow: string;
-  experienceTitle: string;
-  toolsEyebrow: string;
-  toolsTitle: string;
-  expertise: string[];
-  experience: {
-    icon: IconName;
+  image: string;
+  values: {
     title: string;
-    desc: string;
+    icon: IconName;
   }[];
-  tools: {
-    name: string;
-    level: string;
-    desc: string;
-  }[];
+}
+
+export interface BenefitItem {
+  id: string;
+  title: string;
+  description: string;
+  icon: IconName;
+  highlighted?: boolean;
 }
 
 export interface SiteContent {
@@ -193,34 +158,6 @@ export interface SiteContent {
   };
   navigation: NavItem[];
   hero: HeroContent;
-  showreel: ShowreelContent;
-  projects: Project[];
-  portfolio: {
-    eyebrow: string;
-    description: string;
-    trustedByLabel: string;
-    graphicWorkLabel: string;
-    motionWorkLabel: string;
-    videoIndicatorLabel: string;
-    comingSoonLabel: string;
-    clientLabel: string;
-    agencyLabel: string;
-    yearLabel: string;
-    viewProjectLabel: string;
-    backToProjectsLabel: string;
-    projectDetailsLabel: string;
-    descriptionLabel: string;
-    galleryLabel: string;
-  };
-  arItems: ARItem[];
-  arShowcase: {
-    eyebrow: string;
-    title: string;
-    description: string;
-    platformLabel: string;
-    comingSoonLabel: string;
-    features: { title: string; desc: string; }[];
-  };
   services: {
     eyebrow: string;
     title: string;
@@ -233,6 +170,12 @@ export interface SiteContent {
     description: string;
     stepLabel: string;
     steps: CollaborationStep[];
+  };
+  benefits: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    items: BenefitItem[];
   };
   contact: ContactContent;
   about: AboutContent;

@@ -18,28 +18,16 @@ export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ child
     const fetchContent = async () => {
       try {
         setIsLoading(true);
-        const [configRes, projectsRes] = await Promise.all([
-          fetch("/data/config.json"),
-          fetch("/data/projects.json")
-        ]);
+        const configRes = await fetch("/data/config.json");
 
         if (!configRes.ok) {
           throw new Error(`Failed to fetch site config: ${configRes.statusText}`);
         }
-        if (!projectsRes.ok) {
-          throw new Error(`Failed to fetch project data: ${projectsRes.statusText}`);
-        }
 
         const configData = await configRes.json();
-        const projectsData = await projectsRes.json();
 
-        // Merge config and projects into a single SiteContent object
-        const mergedContent: SiteContent = {
-          ...configData,
-          ...projectsData
-        };
-
-        setContent(mergedContent);
+        // Use configData as the SiteContent object
+        setContent(configData);
       } catch (err) {
         console.error("Error loading site content:", err);
         setError(err instanceof Error ? err : new Error("Unknown error loading content"));

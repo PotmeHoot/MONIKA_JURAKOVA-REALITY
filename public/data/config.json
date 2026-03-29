@@ -1,18 +1,18 @@
 {
   "settings": {
-    "title": "Juraj Žáček | Senior Graphic Designer & Content Specialist",
-    "ownerName": "Juraj Žáček",
+    "title": "Monika Juráková | Profesionálna realitná maklérka",
+    "ownerName": "Monika Juráková",
     "email": "jurajzacek13@gmail.com",
     "location": "Bratislava, Slovensko",
     "inquireLabel": "Dopyt",
     "seo": {
-      "description": "Osobné portfólio Juraja Žáčka, senior grafického dizajnéra z Bratislavy. Špecializácia na výkonný obsah pre sociálne siete, motion grafiku a AI vizuály pre globálne značky.",
+      "description": "Profesionálne realitné služby v Bratislave a okolí. Predaj, prenájom a odborné poradenstvo s ľudským prístupom.",
       "keywords": [
-        "Grafický dizajn",
-        "Motion grafika",
-        "AI vizuály",
-        "Obsah pre sociálne siete",
+        "Realitná maklérka",
+        "Predaj nehnuteľností",
         "Bratislava",
+        "Reality",
+        "Prenájom",
         "Slovensko"
       ],
       "ogImage": "/assets/og-image.jpg"
@@ -32,154 +32,144 @@
     "missingAssetLabel": "Chýbajúci súbor"
   },
   "navigation": [
-    { "id": "showreel", "label": "Showreel", "visible": true, "order": 1 },
-    { "id": "work", "label": "Vybrané práce", "visible": true, "order": 2 },
-    { "id": "about", "label": "O mne", "visible": true, "order": 3 },
-    { "id": "services", "label": "Služby", "visible": true, "order": 4 },
-    { "id": "ar", "label": "AR Filtre", "visible": true, "order": 5 },
-    { "id": "collaboration", "label": "Spolupráca", "visible": true, "order": 6 },
-    { "id": "contact", "label": "Kontakt", "visible": true, "order": 7 }
+    { "id": "about", "label": "O mne", "visible": true, "order": 1 },
+    { "id": "services", "label": "Služby", "visible": true, "order": 2 },
+    { "id": "collaboration", "label": "Proces", "visible": true, "order": 3 },
+    { "id": "benefits", "label": "Prečo ja?", "visible": true, "order": 4 },
+    { "id": "contact", "label": "Kontakt", "visible": true, "order": 5 }
   ],
   "hero": {
-    "backgroundImage": "/assets/hero/main.jpg",
-    "eyebrow": "Senior Graphic Designer & Content Specialist",
-    "title": "Tvorím vizuály, motion a AI obsah pre značky, ktoré chcú vyniknúť.",
-    "description": "Pomáham značkám a agentúram vytvárať pôsobivý obsah pre sociálne siete, motion grafiku a vizuály s podporou AI, ktoré prinášajú zásah a výsledky.",
-    "ctaPrimary": { "label": "Poďme spolupracovať", "href": "#contact" },
-    "ctaSecondary": { "label": "Pozrieť vybrané práce", "href": "#work" },
-    "stats": [
-      { "label": "Rokov skúseností", "value": "8+" },
-      { "label": "Dodaných projektov", "value": "200+" },
-      { "label": "Globálnych značiek", "value": "15+" }
+    "backgroundImage": "https://images.unsplash.com/photo-1600607687940-477a63bd39d8?auto=format&fit=crop&q=80&w=1200&h=800",
+    "eyebrow": "Realitná maklérka",
+    "title": "Monika Juráková – predám tvoju nehnuteľnosť rýchlo a férovo",
+    "description": "Pomôžem ti prejsť celým procesom bez stresu – od prvého kontaktu až po podpis zmluvy.",
+    "ctaPrimary": { "label": "Kontaktovať ma", "href": "#contact" },
+    "ctaSecondary": { "label": "Služby", "href": "#services" },
+    "trustBadges": [
+      { "label": "Transparentný prístup", "icon": "CheckCircle" },
+      { "label": "Reálna cenotvorba", "icon": "Zap" },
+      { "label": "Kompletný servis", "icon": "Sparkles" }
     ],
-    "availabilityLabel": "Dostupný pre vybrané projekty",
-    "scrollLabel": "Objavte viac"
-  },
-  "showreel": {
-    "eyebrow": "Motion & Events Showreel",
-    "title": "Veľkoformátový motion dizajn pre globálne podujatia.",
-    "description": "Špecializujem sa na vytváranie vysoko pôsobivého vizuálneho obsahu pre veľké konferencie, pódiové obrazovky a imerzívne eventové prostredia. Moje skúsenosti zahŕňajú on-site vizuálnu adaptáciu a dizajn pre komplexné rozloženia obrazoviek, ktoré pútajú pozornosť v živých produkciách.",
-    "highlights": [
-      "Konferenčné vizuály",
-      "Pódiové obrazovky",
-      "Eventový motion dizajn",
-      "Veľkoformátový obsah",
-      "On-site adaptácia"
-    ],
-    "poster": "/assets/showreel/poster.jpg",
-    "videoUrl": "/assets/showreel/reel.mp4",
-    "videoLabel": "Motion portfólio",
-    "highlightsLabel": "Kľúčové oblasti",
-    "cta": { "label": "Pozrieť Showreel", "href": "#showreel" },
-    "featured": true
-  },
-  "portfolio": {
-    "eyebrow": "Portfólio",
-    "description": "Výber výkonného obsahu navrhnutého tak, aby škáloval moderné značky a prinášal reálne výsledky.",
-    "trustedByLabel": "Dôverujú mi",
-    "graphicWorkLabel": "Grafická tvorba",
-    "motionWorkLabel": "Motion tvorba",
-    "videoIndicatorLabel": "Video",
-    "comingSoonLabel": "Už čoskoro",
-    "clientLabel": "Klient",
-    "agencyLabel": "Agentúra",
-    "yearLabel": "Rok",
-    "viewProjectLabel": "Pozrieť projekt",
-    "backToProjectsLabel": "Späť na projekty",
-    "projectDetailsLabel": "Detaily projektu",
-    "descriptionLabel": "Popis",
-    "galleryLabel": "Galéria projektu"
-  },
-  "arShowcase": {
-    "eyebrow": "Interaktívne technológie",
-    "title": "AR Filtre.",
-    "description": "Interaktívne AR filtre pre TikTok. Spájanie grafického dizajnu s interaktívnou technológiou na vytváranie zážitkov, ktoré zastavia scrollovanie.",
-    "platformLabel": "TikTok Effect House",
-    "comingSoonLabel": "Už čoskoro",
-    "features": [
-      { "title": "Effect House", "desc": "Pokročilá tvorba TikTok filtrov s vysokým virálnym potenciálom." },
-      { "title": "3D Integrácia", "desc": "Plynulé vkladanie 3D objektov do reálneho prostredia." },
-      { "title": "Motion Tracking", "desc": "Vysoko presné sledovanie tváre a tela pre imerzívne efekty." }
-    ]
+    "availabilityLabel": "Dostupná pre nové spolupráce",
+    "scrollLabel": "Zistiť viac"
   },
   "services": {
-    "eyebrow": "Expertíza",
-    "title": "Expertíza a služby",
-    "description": "Špecializované vizuálne riešenia pre moderné digitálne platformy.",
+    "eyebrow": "Moje služby",
+    "title": "Komplexné realitné riešenia",
+    "description": "Zabezpečím pre vás všetko potrebné od prvotnej obhliadky až po odovzdanie kľúčov.",
     "items": [
       {
-        "id": "social",
-        "title": "Grafika pre sociálne siete",
-        "description": "Statický a carouselový obsah optimalizovaný pre vysoký zásah a konzistenciu značky na všetkých platformách.",
-        "icon": "Layout",
+        "id": "sale",
+        "title": "Predaj nehnuteľností",
+        "description": "Profesionálne zastupovanie pri predaji s cieľom dosiahnuť maximálnu trhovú cenu.",
+        "icon": "Home",
         "order": 1
       },
       {
-        "id": "motion",
-        "title": "Reels & Motion obsah",
-        "description": "Dynamický video obsah a motion grafika navrhnutá tak, aby zachytila pozornosť v prvých sekundách.",
-        "icon": "Play",
+        "id": "rent",
+        "title": "Prenájom",
+        "description": "Nájdenie spoľahlivých nájomníkov a kompletná zmluvná dokumentácia.",
+        "icon": "Key",
         "order": 2
       },
       {
-        "id": "ai",
-        "title": "Produkcia s podporou AI",
-        "description": "Využívanie špičkových AI nástrojov na urýchlenie vizuálnej produkcie a vytváranie unikátnych vizuálov.",
-        "icon": "Cpu",
+        "id": "pricing",
+        "title": "Cenotvorba",
+        "description": "Odborný odhad trhovej ceny nehnuteľnosti na základe aktuálnych dát.",
+        "icon": "Calculator",
         "order": 3
       },
       {
-        "id": "ar",
-        "title": "AR Filtre",
-        "description": "Interaktívne zážitky rozšírenej reality pre TikTok, ktoré zvyšujú interakciu so značkou.",
-        "icon": "Sparkles",
+        "id": "staging",
+        "title": "Príprava nehnuteľnosti",
+        "description": "Home staging a profesionálne nafotenie pre atraktívnu prezentáciu.",
+        "icon": "Paintbrush",
         "order": 4
+      },
+      {
+        "id": "legal",
+        "title": "Právny servis",
+        "description": "Zabezpečenie kúpnych zmlúv a právna ochrana počas celého procesu.",
+        "icon": "FileText",
+        "order": 5
       }
     ]
   },
   "collaboration": {
-    "eyebrow": "Spolupráca",
-    "title": "Ako pracujeme",
-    "description": "Štruktúrovaný prístup k dodávaniu vysokokvalitného vizuálneho obsahu.",
+    "eyebrow": "Proces",
+    "title": "Cesta k úspešnému predaju",
+    "description": "Prevediem vás celým procesom krok za krokom, aby ste mali vždy prehľad o aktuálnom stave.",
     "stepLabel": "Krok",
     "steps": [
       {
-        "id": "brief",
-        "title": "Briefing a stratégia",
-        "description": "Pochopenie vašich cieľov, cieľovej skupiny a požiadaviek platformy.",
+        "id": "consultation",
+        "title": "Konzultácia",
+        "description": "Stretneme sa, preberieme vaše predstavy a zhodnotíme stav nehnuteľnosti.",
         "icon": "MessageSquare",
         "order": 1
       },
       {
-        "id": "concept",
-        "title": "Koncept a moodboard",
-        "description": "Vývoj vizuálneho smerovania a kreatívnych konceptov na schválenie.",
-        "icon": "Palette",
+        "id": "pricing",
+        "title": "Nastavenie ceny",
+        "description": "Na základe analýzy trhu a stavu nehnuteľnosti určíme optimálnu predajnú cenu.",
+        "icon": "TrendingUp",
         "order": 2
       },
       {
-        "id": "production",
-        "title": "Produkcia a motion",
-        "description": "Realizácia dizajnov, motion grafiky alebo vizuálov s podporou AI.",
-        "icon": "Zap",
+        "id": "presentation",
+        "title": "Prezentácia",
+        "description": "Zabezpečím home staging, profesionálne fotky a spustíme marketingovú kampaň.",
+        "icon": "Camera",
         "order": 3
       },
       {
-        "id": "delivery",
-        "title": "Revízia a dodanie",
-        "description": "Doladenie výstupov na základe spätnej väzby a dodanie finálnych súborov pripravených na produkciu.",
-        "icon": "CheckCircle",
+        "id": "closing",
+        "title": "Uzatvorenie obchodu",
+        "description": "Nájdeme kupca, dotiahneme právny servis a úspešne odovzdáme nehnuteľnosť.",
+        "icon": "Key",
         "order": 4
       }
     ]
   },
+  "benefits": {
+    "eyebrow": "Prečo ja?",
+    "title": "Vaša dôvera je pre mňa prvoradá",
+    "description": "Zakladám si na hodnotách, ktoré prinášajú reálne výsledky a spokojnosť mojich klientov.",
+    "items": [
+      {
+        "id": "comm",
+        "title": "Jasná komunikácia",
+        "description": "Vždy viete, v akom štádiu je predaj vašej nehnuteľnosti.",
+        "icon": "MessageSquare"
+      },
+      {
+        "id": "price",
+        "title": "Reálna cena",
+        "description": "Nepredávam ilúzie, ale nehnuteľnosti za najlepšiu možnú trhovú cenu.",
+        "icon": "TrendingUp",
+        "highlighted": true
+      },
+      {
+        "id": "time",
+        "title": "Úspora času",
+        "description": "Všetku administratívu a obhliadky vyriešim za vás.",
+        "icon": "Clock"
+      },
+      {
+        "id": "interests",
+        "title": "Zastupovanie záujmov",
+        "description": "Stojím na vašej strane pri vyjednávaní s kupujúcimi.",
+        "icon": "ShieldCheck"
+      }
+    ]
+  },
   "contact": {
-    "title": "Poďme tvoriť",
-    "subtitle": "niečo",
-    "highlight": "ikonické.",
-    "description": "Či už ste agentúra hľadajúca spoľahlivého partnera alebo značka potrebujúca špičkový obsah, som tu, aby som vám pomohol.",
-    "cta": "Začať projekt",
-    "status": "Dostupný pre nové projekty",
+    "title": "Chceš predať alebo prenajať nehnuteľnosť?",
+    "subtitle": "",
+    "highlight": "",
+    "description": "Ozvi sa mi a prejdeme si možnosti bez záväzkov.",
+    "cta": "Kontaktovať ma",
+    "status": "Dostupná pre nové spolupráce",
     "email": "jurajzacek13@gmail.com",
     "directLabel": "Priamy kontakt",
     "socialLabel": "Sociálne siete",
@@ -190,60 +180,14 @@
     ]
   },
   "about": {
-    "eyebrow": "O mne",
-    "title": "Zameriavam sa na prepojenie dizajnu, pohybu a technológií.",
-    "description": "Pôsobím v Bratislave a spolupracujem s poprednými agentúrami a značkami na dodávaní vysokokvalitného vizuálneho obsahu. Môj prístup kombinuje tradičné princípy grafického dizajnu s modernými nástrojmi AI a motion grafikou, aby som vytvoril obsah, ktorý vynikne v dnešnom rýchlom digitálnom svete.",
-    "brandsLabel": "Vybrané značky",
-    "expertiseLabel": "Expertíza",
-    "experienceEyebrow": "Skúsenosti",
-    "experienceTitle": "Kariéra",
-    "toolsEyebrow": "Nástroje a AI",
-    "toolsTitle": "Stack",
-    "expertise": [
-      "Stratégia a dizajn pre sociálne siete",
-      "Motion grafika a produkcia Reels",
-      "Vizuálna tvorba s podporou AI",
-      "TikTok AR filtre (Effect House)",
-      "Kampaňové vizuály a Key Visuals"
-    ],
-    "experience": [
-      {
-        "icon": "Briefcase",
-        "title": "Senior grafický dizajnér",
-        "desc": "Špecializácia na výkonný obsah pre sociálne siete a motion grafiku pre globálne značky."
-      },
-      {
-        "icon": "Zap",
-        "title": "Špecialista na AI vizuály",
-        "desc": "Integrácia špičkových AI nástrojov do kreatívnych procesov na urýchlenie produkcie a zvýšenie kvality."
-      },
-      {
-        "icon": "Sparkles",
-        "title": "Špecialista na TikTok AR",
-        "desc": "Vytváranie interaktívnych zážitkov rozšírenej reality exkluzívne pre TikTok (Effect House)."
-      }
-    ],
-    "tools": [
-      {
-        "name": "Adobe Creative Cloud",
-        "level": "Expert",
-        "desc": "Photoshop, Illustrator, After Effects, Premiere Pro."
-      },
-      {
-        "name": "AI produkčný stack",
-        "level": "Pokročilý",
-        "desc": "Midjourney, Stable Diffusion, Runway Gen-2, Magnific AI."
-      },
-      {
-        "name": "AR vývoj",
-        "level": "Expert",
-        "desc": "Špecialista na Effect House (TikTok)."
-      },
-      {
-        "name": "Motion dizajn",
-        "level": "Expert",
-        "desc": "Špičkové Reels, kinetická typografia a animácie značiek."
-      }
+    "title": "O mne",
+    "description": "Som realitná maklérka, ktorá rieši veci priamo a transparentne. Mojím cieľom je, aby ste sa pri predaji alebo kúpe nehnuteľnosti cítili bezpečne a informovane.",
+    "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=600&h=800",
+    "values": [
+      { "title": "Transparentnosť", "icon": "ShieldCheck" },
+      { "title": "Osobný prístup", "icon": "User" },
+      { "title": "Férové jednanie", "icon": "Scale" },
+      { "title": "Zodpovednosť", "icon": "Award" }
     ]
   }
 }

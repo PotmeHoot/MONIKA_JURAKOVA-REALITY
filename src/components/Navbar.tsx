@@ -15,16 +15,16 @@ export const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6 pointer-events-none">
-      <nav className="bg-black/40 backdrop-blur-md border border-white/5 px-4 py-2 rounded-full flex items-center gap-6 md:gap-10 pointer-events-auto shadow-2xl" aria-label="Main navigation">
-        <div className="text-sm font-bold tracking-widest text-white/90 uppercase">{settings.ownerName}</div>
+      <nav className="bg-white/70 backdrop-blur-md border border-border-base px-4 py-2 rounded-full flex items-center gap-6 md:gap-10 pointer-events-auto shadow-2xl" aria-label="Main navigation">
+        <div className="text-sm font-bold tracking-widest text-text-primary uppercase">{settings.ownerName}</div>
         
-        <div className="hidden lg:flex items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-bold text-white/40">
+        <div className="hidden lg:flex items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-bold text-text-secondary">
           {navigation.map((link) => (
             <a 
               key={link.id}
               href={`#${link.id}`} 
               onClick={(e) => handleLinkClick(e, link.id)}
-              className={`transition-colors ${activeSection === link.id ? "text-white" : "hover:text-white"}`}
+              className={`transition-colors ${activeSection === link.id ? "text-accent" : "hover:text-accent"}`}
               aria-current={activeSection === link.id ? "page" : undefined}
             >
               {link.label}

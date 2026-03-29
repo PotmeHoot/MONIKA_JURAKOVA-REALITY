@@ -13,8 +13,6 @@ export const Services = () => {
 
   return (
     <SectionWrapper>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/[0.03] rounded-full blur-[120px] -z-10" />
-      
       <motion.div
         variants={FADE_UP_VARIANTS}
         initial="hidden"
@@ -29,7 +27,7 @@ export const Services = () => {
           centered
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.items.sort((a, b) => a.order - b.order).map((service, i) => {
             return (
               <motion.div 
@@ -43,12 +41,14 @@ export const Services = () => {
                   delay: shouldReduceMotion ? 0 : i * 0.05 
                 }}
               >
-                <CardShell className="group h-full flex flex-col">
-                  <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:bg-white group-hover:text-black transition-all duration-500">
-                    <Icon name={service.icon} className="w-6 h-6" />
+                <CardShell className="group h-full flex flex-col bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-accent/30 transition-all duration-500 border-border-base">
+                  <div className="w-14 h-14 rounded-2xl bg-bg-primary flex items-center justify-center mb-8 group-hover:bg-accent/10 group-hover:text-accent transition-all duration-500">
+                    <Icon name={service.icon} className="w-7 h-7 stroke-[1.5]" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">{service.title}</h3>
-                  <p className="text-sm text-text-secondary group-hover:text-white/70 transition-colors leading-relaxed">
+                  <h3 className="text-2xl font-bold mb-4 text-text-primary group-hover:text-accent transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-base text-text-secondary leading-relaxed">
                     {service.description}
                   </p>
                 </CardShell>

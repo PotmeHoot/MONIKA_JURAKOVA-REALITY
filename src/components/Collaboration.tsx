@@ -12,14 +12,13 @@ export const Collaboration = () => {
   const { collaboration } = content;
 
   return (
-    <SectionWrapper className="bg-bg-secondary">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
-      
+    <SectionWrapper className="bg-bg-secondary overflow-hidden">
       <motion.div
-        initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-20px" }}
-        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        variants={FADE_UP_VARIANTS}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        transition={DEFAULT_TRANSITION}
       >
         <SectionHeader 
           eyebrow={collaboration.eyebrow}
@@ -28,32 +27,46 @@ export const Collaboration = () => {
           centered
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {collaboration.steps.sort((a, b) => a.order - b.order).map((step, i) => (
-            <motion.div 
-              key={step.id}
-              initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ 
-                duration: 0.4,
-                ease: [0.16, 1, 0.3, 1],
-                delay: shouldReduceMotion ? 0 : i * 0.05 
-              }}
-            >
-              <CardShell className="group h-full flex flex-col items-center text-center p-8 md:p-10">
-                <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-8 group-hover:bg-white group-hover:text-black transition-all duration-500">
-                  <Icon name={step.icon} className="w-8 h-8" />
+        <div className="relative mt-20">
+          {/* Desktop Line Connector */}
+          <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-px bg-border-base" />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative">
+            {collaboration.steps.sort((a, b) => a.order - b.order).map((step, i) => (
+              <motion.div 
+                key={step.id}
+                variants={FADE_UP_VARIANTS}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ 
+                  ...DEFAULT_TRANSITION,
+                  delay: shouldReduceMotion ? 0 : i * 0.1 
+                }}
+                className="relative flex flex-col items-center text-center group"
+              >
+                {/* Mobile/Tablet Line Connector */}
+                {i < collaboration.steps.length - 1 && (
+                  <div className="lg:hidden absolute top-24 left-1/2 -translate-x-1/2 w-px h-12 bg-border-base" />
+                )}
+
+                {/* Step Number & Icon Circle */}
+                <div className="relative z-10 w-24 h-24 rounded-full bg-white border border-border-base flex items-center justify-center mb-8 shadow-sm group-hover:border-accent group-hover:shadow-md transition-all duration-500">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center shadow-lg">
+                    0{i + 1}
+                  </div>
+                  <Icon name={step.icon} className="w-8 h-8 text-text-primary group-hover:text-accent transition-colors duration-500" />
                 </div>
                 
-                <div className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/20 mb-4">{collaboration.stepLabel} 0{i + 1}</div>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">{step.title}</h3>
-                <p className="text-sm text-text-secondary group-hover:text-white/70 transition-colors leading-relaxed">
+                <h3 className="text-2xl font-bold mb-4 text-text-primary group-hover:text-accent transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-base text-text-secondary leading-relaxed max-w-[240px]">
                   {step.description}
                 </p>
-              </CardShell>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </motion.div>
     </SectionWrapper>
